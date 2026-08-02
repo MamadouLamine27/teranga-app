@@ -81,3 +81,8 @@ npm run lint     # vérifier le code
   événements passés (galerie, comptes-rendus courts) en plus de l'agenda à venir.
   Objectif : entretenir la mémoire communautaire et valoriser l'asso. Contenu
   dans `src/content/evenements/archives/`, photos dans `public/images/evenements/`.
+
+<!-- Journal de session -->
+- **[Session 1] Projet Next.js initialisé** (TypeScript, Tailwind, ESLint, App Router,
+  src/). Page d'accueil provisoire aux couleurs de l'asso. Prochaine étape : poser
+  le layout commun (header/footer) et le plan des pages publiques.
