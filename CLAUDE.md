@@ -92,3 +92,11 @@ npm run lint     # vérifier le code
   tout le site. L'identité passe par la couleur (vert Teranga principal, jaune/
   rouge en accent). Le drapeau est réservé à des endroits forts et ponctuels
   (accueil, page « L'asso », écran de connexion). Jamais dans le header/footer.
+
+<!-- Journal de session -->
+- **[Session 1 — 02/08] Base technique en place.** Projet Next.js initialisé
+  (TypeScript, Tailwind, ESLint, App Router). Structure de dossiers aplatie à la
+  racine, lockfiles parasites nettoyés. Thème Teranga (couleurs du drapeau en
+  variables CSS) + layout commun header/footer branché sur toutes les pages.
+  Drapeau du Sénégal en emoji sur l'accueil, non répété ailleurs (identité par la
+  couleur). Prochaine session : page « L'asso ».
