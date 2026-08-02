@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ===== Charte Teranga (couleurs du drapeau du Sénégal) ===== */
+:root {
+  --teranga-vert: #00853F;
+  --teranga-jaune: #FDEF42;
+  --teranga-rouge: #E31B23;
+  --teranga-vert-fonce: #0C7A3D;
+  --teranga-texte: #1c1c1a;
+}

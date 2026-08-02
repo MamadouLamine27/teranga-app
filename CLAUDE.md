@@ -86,3 +86,9 @@ npm run lint     # vérifier le code
 - **[Session 1] Projet Next.js initialisé** (TypeScript, Tailwind, ESLint, App Router,
   src/). Page d'accueil provisoire aux couleurs de l'asso. Prochaine étape : poser
   le layout commun (header/footer) et le plan des pages publiques.
+
+<!-- Décision design -->
+- **[Session 1] Usage du drapeau.** Le drapeau du Sénégal n'est PAS répété sur
+  tout le site. L'identité passe par la couleur (vert Teranga principal, jaune/
+  rouge en accent). Le drapeau est réservé à des endroits forts et ponctuels
+  (accueil, page « L'asso », écran de connexion). Jamais dans le header/footer.
