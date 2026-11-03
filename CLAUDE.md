@@ -100,3 +100,14 @@ npm run lint     # vérifier le code
   variables CSS) + layout commun header/footer branché sur toutes les pages.
   Drapeau du Sénégal en emoji sur l'accueil, non répété ailleurs (identité par la
   couleur). Prochaine session : page « L'asso ».
+
+<!-- Journal de session -->
+- **[Session 2 suite] Espace bureau sécurisé + remise de carte.**
+  Auth admin : /admin/login (mot de passe partagé ADMIN_PASSWORD), cookie signé
+  HMAC Web Crypto (edge-compatible), middleware qui protège /admin/cartes et
+  /admin/membres, /api/admin/logout + barre admin avec déconnexion. Œil
+  afficher/masquer sur le mot de passe. Téléchargement de la carte en PNG
+  (html-to-image). Secrets dans .env.local : SUPABASE_*, ADMIN_PASSWORD,
+  ADMIN_SECRET.
+  À FAIRE : envoi carte par email ; déployer en ligne (Vercel) ; brancher
+  HelloAsso ; aligner "de la Sorbonne" partout.
