@@ -1,21 +1,48 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const offres = [
+  { t: "Accueil & démarches", d: "Une checklist claire pour tes 90 premiers jours : titre de séjour, sécu, CAF, banque." },
+  { t: "Logement & vie pratique", d: "Trouver un logement sans se faire avoir, et les bons plans du quotidien à Paris." },
+  { t: "Parrainage Teranga", d: "Un ancien qui t'accompagne dès l'arrivée. On n'arrive jamais seul." },
+  { t: "Culture & communauté", d: "Les événements, la vie de l'asso, et le lien avec le Sénégal." },
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6 p-8 text-center">
-      <Image
-        src="/images/logo.png"
-        alt="Logo de l'Association des Étudiants Sénégalais de Sorbonne (AESS)"
-        width={180}
-        height={180}
-        priority
-      />
+    <>
+      <section className="hero">
+        <div className="wrap">
+          <div className="rule" />
+          <h1>Bienvenue dans ta communauté à la Sorbonne.</h1>
+          <p>
+            Guides, entraide et parrainage pour les étudiants sénégalais et
+            africains qui arrivent en France — portés par la Teranga.
+          </p>
+          <div className="cta">
+            <Link href="/a-propos" className="btn btn-gold">Faire connaissance</Link>
+            <Link href="#" className="btn btn-outline">Nous rejoindre</Link>
+          </div>
+        </div>
+      </section>
 
-      <h1 className="text-3xl font-bold">Teranga App</h1>
-      <p className="max-w-md text-gray-600">
-        Le site de l&apos;Association des Étudiants Sénégalais de Sorbonne.
-        Bientôt : guides, événements, espace membre et parrainage Teranga.
-      </p>
-    </main>
+      <section className="section">
+        <div className="wrap">
+          <h2>Ce que tu trouves ici</h2>
+          <p className="lead">
+            Un seul endroit, pensé par des étudiants passés par là, pour s'y
+            retrouver dès le premier jour.
+          </p>
+          <div className="offer">
+            {offres.map((o) => (
+              <div key={o.t}>
+                <div className="k" />
+                <h3>{o.t}</h3>
+                <p>{o.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

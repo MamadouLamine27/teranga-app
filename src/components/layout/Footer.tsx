@@ -1,8 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-gray-200">
-      <div className="mx-auto max-w-5xl px-6 py-6 text-center text-sm text-gray-500">
-        Association des Étudiants Sénégalais de la Sorbonne — Pôle Digital &amp; Innovation
+    <footer className="site-footer">
+      <div className="wrap">
+        <div className="brand-f">Teranga App</div>
+        <p>Association des Étudiants Sénégalais de la Sorbonne</p>
+        <p>Votre communauté, plus proche de vous.</p>
       </div>
     </footer>
   );
