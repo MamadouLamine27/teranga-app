@@ -111,3 +111,23 @@ npm run lint     # vérifier le code
   ADMIN_SECRET.
   À FAIRE : envoi carte par email ; déployer en ligne (Vercel) ; brancher
   HelloAsso ; aligner "de la Sorbonne" partout.
+
+<!-- Point d'étape & feuille de route -->
+- **[Session 2 — bilan] Fait :** design Teranga ; pages Accueil + L'association
+  (bandeau vert, mission avec logo, valeurs, bureau exécutif 2026 + 10 pôles en
+  cartes photo à remplir) ; carte membre complète (saisie contrôlée, Supabase,
+  numéro unique, /verifier/[numero], QR, téléchargement PNG, email de bienvenue) ;
+  espace bureau sécurisé (login/logout cookie signé Web Crypto, middleware, liste
+  membres + recherche) ; squelettes Événements / Ressources / Parrainage /
+  Partenaires ; boutons accueil corrigés.
+- **DÉCISION : on abandonne HelloAsso.** Adhésion = paiement hors-ligne auprès du
+  bureau, qui crée et envoie la carte (déjà en place). Pas de paiement en ligne.
+- **Feuille de route (pages, dans l'ordre) :** 1) Événements (À venir/Passés/
+  Galerie) · 2) Ressources/Guides (checklist 90j, logement, aides, jobs) ·
+  3) Parrainage Teranga (formulaire) · 4) Finaliser L'association (photos) ·
+  5) Partenaires. Puis : mise en ligne (Vercel), refonte page d'accueil + animation.
+- **Idées notées (plus tard) :** générateur de CV multi-styles (neutre, PAS aux
+  couleurs AESS, couleur au choix) + lettre de motivation ; chatbot RAG sur nos
+  guides ; Grenier Teranga (dons de fin d'année) ; carte des bons plans diaspora ;
+  attestation d'adhésion/engagement téléchargeable ; annuaire membres + alumni ;
+  calendrier culturel ; témoignages d'anciens ; rappels délais titre de séjour.

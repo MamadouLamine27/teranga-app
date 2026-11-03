@@ -19,8 +19,8 @@ export default function Home() {
             africains qui arrivent en France — portés par la Teranga.
           </p>
           <div className="cta">
-            <Link href="/a-propos" className="btn btn-gold">Faire connaissance</Link>
-            <Link href="#" className="btn btn-outline">Nous rejoindre</Link>
+            <Link href="/ressources" className="btn btn-gold">Découvrir les guides</Link>
+            <Link href="/a-propos" className="btn btn-outline">Qui sommes-nous</Link>
           </div>
         </div>
       </section>

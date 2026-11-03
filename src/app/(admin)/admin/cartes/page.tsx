@@ -37,6 +37,7 @@ export default function AdminCartes() {
   const [envoi, setEnvoi] = useState(false);
   const [erreurServeur, setErreurServeur] = useState("");
   const carteRef = useRef<HTMLDivElement>(null);
+  const [mail, setMail] = useState<string>("");
 
   const set = (k: keyof Infos) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setF((p) => ({ ...p, [k]: e.target.value }));
@@ -67,6 +68,22 @@ export default function AdminCartes() {
     a.href = dataUrl;
     a.download = `carte-aess-${carte.nom}-${carte.numero}.png`;
     a.click();
+  };
+
+  const envoyerMail = async () => {
+    if (!carte || !carteRef.current) return;
+    setMail("Envoi…");
+    try {
+      const imageBase64 = await toPng(carteRef.current, { pixelRatio: 3, cacheBust: true });
+      const res = await fetch("/api/cartes/envoyer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ numero: carte.numero, imageBase64 }),
+      });
+      setMail(res.ok ? "Carte envoyée par email \u2714" : "Échec de l'envoi.");
+    } catch {
+      setMail("Échec de l'envoi.");
+    }
   };
 
   const telCarte = carte ? numFR(carte.telephone) : null;
@@ -131,9 +148,11 @@ export default function AdminCartes() {
             </div>
             <div className="membercard-foot">N° {carte.numero} · {carte.email}</div>
           </div>
-          <button className="btn btn-gold" onClick={telecharger} style={{ marginTop: 16 }}>
-            Télécharger la carte (PNG)
-          </button>
+          <div style={{ marginTop: 16, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+            <button className="btn btn-gold" onClick={telecharger}>Télécharger la carte (PNG)</button>
+            <button className="btn btn-green" onClick={envoyerMail}>Envoyer par email</button>
+            {mail && <span style={{ color: "var(--muted)" }}>{mail}</span>}
+          </div>
         </div>
       )}
 
